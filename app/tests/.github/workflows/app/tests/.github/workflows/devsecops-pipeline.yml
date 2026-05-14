@@ -1,0 +1,23 @@
+=== Dependency Scan ===
+Safety v2.3.0
+Vulnerability found: flask 1.0 - CVE-2019-1010083
+
+=== Unit Tests ===
+pytest tests/
+F.. [100%]
+===================================
+FAILURES:
+test_echo_empty_message
+AssertionError: Expected status code 400 but got 200
+
+=== Docker Build ===
+Successfully built insecure-app:latest
+
+=== Container Scan ===
+Trivy v0.45.0
+CRITICAL: python:3.7 base image has multiple vulnerabilities (openssl, glibc)
+
+=== Deployment ===
+Skipped due to previous failures.
+
+Pipeline FAILED at unit test and container scan stages.
